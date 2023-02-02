@@ -9,7 +9,7 @@ import { getSynthesizeSpeechUrl } from "@aws-sdk/polly-request-presigner";
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  apiKey: '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'
+  apiKey: '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'
 });
 
 const openai = new OpenAIApi(configuration);
@@ -103,7 +103,7 @@ export default function Home() {
       }
       const completion2 = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: chosenLanguage==='en-US' ? `Write 10 sentence in the present tense in ${completion.data.choices[0].text}` : `Escolha um tema e escreva apenas 1 frase no tempo presente em ${completion.data.choices[0].text}.`
+        prompt: chosenLanguage==='en-US' ? `Write 1 sentence in the present tense in ${completion.data.choices[0].text}` : `Escolha um tema e escreva apenas 1 frase no tempo presente em ${completion.data.choices[0].text}.`
       });
       let sentencesChatGPT = "";
       for (let i = 0; i < 10; i++) {
