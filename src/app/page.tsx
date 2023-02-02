@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from './page.module.scss';
 import Visualizer from "../libs/Visualizer";
-import getUserMedia from 'get-user-media-promise';
+const getUserMedia = require('get-user-media-promise');
 import * as TranscribeClient from "../libs/transcribeClient.js";
 import { PollyClient, SynthesizeSpeechCommand } from "@aws-sdk/client-polly";
 import { getSynthesizeSpeechUrl } from "@aws-sdk/polly-request-presigner";
@@ -14,7 +14,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-function playSound(url: string) {
+function playSound(url: any) {
   var ourAudio = document.createElement('audio'); // Create a audio element using the DOM
   ourAudio.style.display = "none"; // Hide the audio element
   ourAudio.src = url; // Set resource to our URL
