@@ -1,0 +1,117 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.welcomeText {
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 32px;
+  padding-top: 50px;
+}
+
+#t1 {
+  animation-duration: 3s;
+  animation-name: welcomeText1;
+}
+
+#t2 {
+  animation-duration: 6s;
+  animation-name: welcomeText2;
+}
+
+#t3 {
+  animation-duration: 9s;
+  animation-name: welcomeText3;
+}
+
+@keyframes welcomeText1 {
+  from {
+    font-size: 0px;
+  }
+  to {
+    font-size: 32px;
+  }
+}
+@keyframes welcomeText2 {
+  0% {
+    font-size: 0px;
+  }
+  30% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 32px;
+  }
+}
+@keyframes welcomeText3 {
+  0% {
+    font-size: 0px;
+  }
+  50% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 32px;
+  }
+}
+
+.strongWord {
+  font-weight: bold;
+  color: #ffbc18;
+}
+
+.selectLanguageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 12s;
+  animation-name: selectLanguageBox;
+}
+
+@keyframes selectLanguageBox {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.microfoneDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 800px;
+  height: 800px;
+  background-color: black;
+  border-color: #ffbc18;
+  border-width: 3px;
+  border-style: solid;
+  margin: 100px;
+}
+
+.hiddenMicrofoneDiv {
+  display: none;
+}
+
+.microfoneBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
